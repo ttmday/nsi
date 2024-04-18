@@ -50,7 +50,7 @@ export class ShopifyApiService {
         );
     }
     async getAllOrders(): Promise<Response> {
-        const { client, apiVersion } = getClient();
+        const { client } = getClient();
         return await client.get("orders.json", {
             searchParams: {
                 status: "any",
